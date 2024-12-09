@@ -1,0 +1,40 @@
+@use '/fsd-4shared/configered-styles/mixins' as mixins ;
+  
+.article{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.compose{
+    display: flex;
+    justify-content: space-between;
+}
+.left_side{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    max-width: 370px; 
+        a{
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+        span{
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+}
+
+.right_side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        cursor: pointer;
+        &:hover{
+            fill: gold;
+        }
+    }
+}
