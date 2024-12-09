@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function ProductCart({width, height, data}) {
   return (
     <article className={styles.article}>
-        <figure>
+        <figure className={styles.figure}>
             <Link href={`/product/${data.sku}`}><Image width={width} height={height} src={data.imageUrl} alt={data.name} quality={100}/></Link>
         </figure>
         <div className={styles.compose}>
