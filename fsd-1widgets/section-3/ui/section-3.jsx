@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import {Navigation,Pagination, Mousewheel} from 'swiper/react'
+import {Navigation} from 'swiper/modules'
 import Image from 'next/image';
 import styles from './section-3.module.scss'
 
@@ -31,9 +31,11 @@ const overlaytext={
 }
     return (
         <section className={styles.section}>
-            <Swiper  slidesPerView={1} 
+            <Swiper 
+            slidesPerView={1} 
+            modules={[Navigation]} 
             navigation={true}  
-            loop={true} modules={Navigation} 
+            loop={true} 
             className={styles.swiper}>
                 {
                     data.map((item, index) => (

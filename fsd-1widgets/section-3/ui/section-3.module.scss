@@ -1,25 +1,28 @@
+@use '/fsd-4shared/configered-styles/mixins' as mixins;
 .section{
+    width: 100%;
     position: relative;
     display: flex;
     max-width: 1920px;
+    max-height: 1080px;
+    overflow: hidden;
+
 }
 
 .swiper{
     width: 100%;
-    max-height: 1080px;
 }
 
 .swiper_slide {
-    max-height: 1080px;
     overflow: hidden;
-    display: flex;
     img{
-        scale: 1.45;
+        scale: 1.2;
         object-fit: cover;
-        width: 100vw;
+        width: 100%;
         max-width: 1920px;
         aspect-ratio: 16 / 9;
-    }
+        @include mixins.transform(-130px, -50px)
+}
   }
 
   .overlay{

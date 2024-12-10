@@ -1,0 +1,52 @@
+@use '/fsd-4shared/configered-styles/mixins' as mixins;
+.section{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1920px;
+    max-height: 1080px;
+    overflow: hidden;
+
+}
+
+.swiper{
+    width: 100%;
+}
+
+.swiper_slide {
+    overflow: hidden;
+    background: #000;
+    img{
+        //scale: 1.2;
+        object-fit: cover;
+        width: 100%;
+        max-width: 1200px;
+        aspect-ratio: 2731 / 4096;
+        @include mixins.transform(40px, 0px);
+}
+  }
+
+  .overlay{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    // right: 50%;
+    bottom: 3%;
+    color: #fff;
+    font-family: Arial;
+    }
+
+  .general_text{
+    font-size: 0.625rem;
+  } 
+
+  .link_text{
+    font-size: 0.825rem;
+    text-decoration:underline;
+
+  }

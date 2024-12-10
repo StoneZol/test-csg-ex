@@ -6,10 +6,10 @@
     -o-transition:$duration;
 }
 
-@mixin grandBorderRadius($radius : 15px) {
-    border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
+@mixin transform($x: 0px, $y: 0px){
+    transform: translateY($x)translateX($y);
+    -webkit-transform: translateY($x)translateX($y);
+    -moz-transform: translateY($x)translateX($y);
+    -ms-transform: translateY($x)translateX($y);
+    -o-transform: translateY($x)translateX($y);
 }

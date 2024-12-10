@@ -1,0 +1,31 @@
+.header{
+    padding: 15px;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    max-width: 1920px;
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_side{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    button{
+        border: 0;
+        background-color: transparent;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.right_side{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}

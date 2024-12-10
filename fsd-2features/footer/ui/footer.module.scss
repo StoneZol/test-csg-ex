@@ -1,0 +1,98 @@
+@use '/fsd-4shared/configered-styles/mixins' as mixins;
+
+.footer{
+    font-family: Arial;
+    font-weight: 400;
+    line-height: 17.5px;
+    height: 712px;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
+}
+
+.bottom_side{
+    position: absolute;
+    bottom: 0;
+    padding: 0 60px 30px 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.autor {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    span{
+        font-weight: 200;
+        margin-right: 10px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        span {
+            font-weight: 400;
+            &:nth-of-type(2) { 
+                color: #777575;
+            }
+        }
+    }
+}
+
+.top_side{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    span{
+        font-weight: 400;
+        font-size: 1.063rem;
+    }
+    a{
+        font-size: 0.875rem;
+    }
+}
+
+.help, .contacts, .info, .subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.contacts{
+    .links{
+        gap: 30px;
+    }
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    line-height: 17.5px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+.phone{
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe{
+@include mixins.transform(-30px);
+button{
+    background: #000;
+    color: #fff;
+    width: 316px;
+    height: 50px;
+    border: 1px solid #fff;
+    font-size: 0.875rem;
+}
+}
