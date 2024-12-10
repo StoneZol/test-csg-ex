@@ -39,8 +39,10 @@
         flex-direction: column;
         span {
             font-weight: 400;
+            font-size: 0.875rem;
             &:nth-of-type(2) { 
                 color: #777575;
+                font-size: 0.625rem;
             }
         }
     }
