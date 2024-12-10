@@ -9,10 +9,13 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
         <div className={styles.top_side}>
-            <div className={styles.subscribe}>
-                <span>ПОДПИСКА НА РАССЫЛКУ И СКИДКА</span>
-                <button>ПОДПИСАТЬСЯ</button>
+            <div className={styles.left_side}>
+                <div className={styles.subscribe}>
+                    <span>ПОДПИСКА НА РАССЫЛКУ И СКИДКА</span>
+                    <button>ПОДПИСАТЬСЯ</button>
                 </div>
+            </div>
+            <div className={styles.right_side}>
             <div className={styles.help}>
                 <span>ПОМОЩЬ</span>
                 <div className={styles.links}>
@@ -47,6 +50,7 @@ export default function Footer() {
                 <Link href={'#'}>Политика конфедициаальности</Link>
                 <Link href={'#'}>Использование файлов cookie</Link>
                 </div>
+            </div>
             </div>
         </div>
         <div className={styles.bottom_side}>

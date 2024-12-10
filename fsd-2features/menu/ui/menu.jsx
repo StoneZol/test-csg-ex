@@ -4,6 +4,7 @@ import styles from './menu.module.scss'
 import Close from '@/fsd-4shared/icons/icons-menu/close'
 import LogoMenu from '@/fsd-4shared/icons/icons-menu/logo-menu'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 export default function Menu({open = false, close}) {
     const categories = [
@@ -31,7 +32,7 @@ export default function Menu({open = false, close}) {
             }
         </div>
         <div className={styles.buttons}>
-            <button>СМОТРЕТЬ ВСЕ</button>
+            <button onClick={()=>{redirect('/categories')}}>СМОТРЕТЬ ВСЕ</button>
             <button>GIFT CARD/ПОДАРОЧНАЯ КАРТА</button>
         </div>
         <div className={styles.autor}>

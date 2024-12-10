@@ -1,7 +1,7 @@
 .section {
-    width: 100vw;
-    aspect-ratio: 16 / 9;
+    width: 100%;
     max-width: 1920px;
+    aspect-ratio: 16 / 9;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,12 +11,12 @@
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .left_side{
     width: 50%;
-    min-height: 660px;
-    max-width: 810px;
+    min-width: 400px;
     aspect-ratio: 1620 / 2160;
     img{
         width: 100%;

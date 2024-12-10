@@ -1,6 +1,6 @@
 @use '/fsd-4shared/configered-styles/mixins' as mixins;
 .nav{
-    z-index: 999;
+    z-index: 600;
     width: 500px;
     padding: 77px;
     height: 100vh;
@@ -19,6 +19,9 @@
 .open{
     @include mixins.transform();
     @include mixins.transition()
+}
+.head,.links,.buttons, .autor {
+    z-index: 999;
 }
 
 .head{
@@ -58,7 +61,7 @@
 .blocker{
     width: 100vw;
     height: 100vh;
-    z-index: 998;
+    z-index: 900;
     position: fixed;
     background: transparent;
 }

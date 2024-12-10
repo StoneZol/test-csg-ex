@@ -1,0 +1,40 @@
+@use '/fsd-4shared/configered-styles/mixins' as mixins ;
+  
+.article{
+    box-sizing: content-box;
+    padding: 10px;
+    width: 100%;
+    max-width: 405px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.figure {
+    width: 405px;
+    height: 424px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    img {
+      height: 100%;
+      object-fit: cover; 
+    }
+  }
+
+.compose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #5d4839;
+    h2{
+        font-size: 1.125rem;
+        font-weight: 400;
+        display: inline-block;
+    }
+    span{
+      color: #5D483980;
+    }
+}
