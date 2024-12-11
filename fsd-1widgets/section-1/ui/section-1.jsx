@@ -33,8 +33,8 @@ export default function Section1() {
     return (
         <section className={styles.section}>
             <div className={styles.swiper_navigation}>
-                <div className="next_section1"><Prev/></div>
-                <div className="prev_section1"><Next/></div>
+            <div className="prev_section1"><Prev/></div>
+                <div className="next_section1"><Next/></div>
             </div>
             <Swiper
                 slidesPerView={1}

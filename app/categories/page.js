@@ -45,14 +45,14 @@ export default function Page() {
         }
     ]
     const categories = [
-        { name: 'Серьги', linkUrl: '/categories/palto', action: false },
-        { name: 'Кольца', linkUrl: '/platya', action: false },
-        { name: 'Браслеты', linkUrl: '/yubki', action: false },
-        { name: 'Цепочки', linkUrl: '/kostyumy', action: false },
-        { name: 'Сеты', linkUrl: '/bryuki', action: false },
-        { name: 'Пояса', linkUrl: '/new-year-collection', action: false },
-        { name: 'Чокеры', linkUrl: '/longslyvy', action: false },
-      ];
+        { name: 'Серьги', linkUrl: '/categories/sergi', action: false },
+        { name: 'Кольца', linkUrl: '/categories/kolca', action: false },
+        { name: 'Браслеты', linkUrl: '/categories/braslety', action: false },
+        { name: 'Цепочки', linkUrl: '/categories/cepochki', action: false },
+        { name: 'Сеты', linkUrl: '/categories/sety', action: false },
+        { name: 'Пояса', linkUrl: '/categories/poiasa', action: false },
+        { name: 'Чокеры', linkUrl: '/categories/chokery', action: false },
+    ];    
 
   return (
     <div className={`${manrope.className} ${styles.page}`}> 
@@ -60,7 +60,7 @@ export default function Page() {
     <div className={styles.left_side}>
         <span>КАТЕГОРИИ</span>
         <div>
-        <Link href={"#"}><b>Все укращения</b></Link>
+        <Link href={"#"}><b>Все украшения</b></Link>
             {
                 categories.map((item,index)=>(
                     <Link key={index} href={item.linkUrl}>{item.name}</Link>

@@ -1,10 +1,9 @@
-@use '/fsd-4shared/configered-styles/mixins' as mixins ;
-  
-.article{
-    box-sizing: content-box;
-    padding: 10px;
+@use '/fsd-4shared/configered-styles/mixins' as mixins;
+
+.article {
     width: 100%;
     max-width: 405px;
+    aspect-ratio: 400 / 478;
     gap: 10px;
     display: flex;
     flex-direction: column;
@@ -12,29 +11,32 @@
 }
 
 .figure {
-    width: 405px;
-    height: 424px;
+    max-width: 405px;
+    max-height: 424px;
+    aspect-ratio: 405 / 424;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: start;
     img {
-      height: 100%;
-      object-fit: cover; 
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
-  }
+}
 
-.compose{
+.compose {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #5d4839;
-    h2{
+    h2 {
         font-size: 1.125rem;
         font-weight: 400;
         display: inline-block;
     }
-    span{
-      color: #5D483980;
+    span {
+        color: #5D483980;
     }
 }
+
