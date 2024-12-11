@@ -1,5 +1,5 @@
 @use '/fsd-4shared/configered-styles/mixins' as mixins;
-.section{
+.section {
     width: 100%;
     position: relative;
     display: flex;
@@ -7,27 +7,40 @@
     max-width: 1920px;
     max-height: 1080px;
     overflow: hidden;
-
 }
 
-.swiper{
+.swiper_navigation {
+    padding: 0 4%;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: calc(50% - 73px);
+    div {
+        z-index: 310;
+        cursor: pointer;
+    }
+}
+
+.swiper {
     width: 100%;
 }
 
 .swiper_slide {
     overflow: hidden;
     background: #000;
-    img{
+    img {
         //scale: 1.2;
         object-fit: cover;
         width: 100%;
         max-width: 1200px;
         aspect-ratio: 2731 / 4096;
-        @include mixins.transform(40px, 0px);
+        @include mixins.transform(40px, 0);
+    }
 }
-  }
 
-  .overlay{
+.overlay {
     position: absolute;
     z-index: 10;
     display: flex;
@@ -35,18 +48,57 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    // right: 50%;
     bottom: 3%;
     color: #fff;
     font-family: Arial;
+}
+
+.general_text {
+    font-size: 0.625rem;
+}
+
+.link_text {
+    font-size: 0.825rem;
+    text-decoration: underline;
+}
+
+@media (max-width:620px) {
+    .swiper_navigation {
+        top: calc(50% - 9px);
+        div {
+            cursor: pointer;
+            svg {
+                height: 18px;
+                stroke-width: 10;
+            }
+        }
+    }
+}
+
+@media (max-width:1020px) {
+    .section {
+        min-height: 652px;
+        max-height: 1080px;
     }
 
-  .general_text{
-    font-size: 0.625rem;
-  } 
-
-  .link_text{
-    font-size: 0.825rem;
-    text-decoration:underline;
-
-  }
+    .swiper_slide {
+        height: auto;
+        aspect-ratio: 2 / 3;
+        img {
+            scale: 1;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            max-width: 1920px;
+            aspect-ratio: 2 / 3;
+            @include mixins.transform()
+        }
+    }
+    .overlay {
+        gap: 5px;
+        bottom: 2%;
+    }
+    .link_text {
+        font-size: 0.625rem;
+    }
+}

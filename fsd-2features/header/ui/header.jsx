@@ -11,20 +11,23 @@ import Menu from '@/fsd-2features/menu/ui/menu'
 import useShowMenu from '@/fsd-4shared/hooks/use-show-menu'
 
 export default function Header() {
-  const {showMenu, setShowMenu} = useShowMenu()
-  return (
-    <header className={styles.header}>
-      <Menu open={showMenu} close={setShowMenu}/>
-        <div className={styles.left_side}>
-            <button onClick={()=>setShowMenu(true)}><Burger/></button>
-            <Link href={'/'}><Logo/></Link>
-        </div>
-        <div className={styles.right_side}>
-            <Search/>
-            <Profile/>
-            <Basket/>
-            <Favorite/>
-        </div>
-    </header>
-  )
+    const {showMenu, setShowMenu} = useShowMenu()
+    return (
+        <header className={styles.header}>
+            <Menu open={showMenu} close={setShowMenu}/>
+            <div className={styles.blend}>
+                <div className={styles.left_side}>
+                    <button onClick={() => setShowMenu(true)}><Burger/></button>
+                    <Link href={'/'}><Logo/></Link>
+                </div>
+                <div></div>
+                <div className={styles.right_side}>
+                    <Search/>
+                    <Profile/>
+                    <Basket/>
+                    <Favorite/>
+                </div>
+            </div>
+        </header>
+    )
 }

@@ -4,9 +4,11 @@ import styles from './menu.module.scss'
 import Close from '@/fsd-4shared/icons/icons-menu/close'
 import LogoMenu from '@/fsd-4shared/icons/icons-menu/logo-menu'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
+import {useRouter } from 'next/navigation'
+import Profile from '@/fsd-4shared/icons/icons-header/profile'
 
 export default function Menu({open = false, close}) {
+    const router = useRouter();
     const categories = [
         { name: 'Жакеты', linkUrl: '/jakety', action: false },
         { name: 'Пальто', linkUrl: '/palto', action: false },
@@ -32,12 +34,16 @@ export default function Menu({open = false, close}) {
             }
         </div>
         <div className={styles.buttons}>
-            <button onClick={()=>{redirect('/categories')}}>СМОТРЕТЬ ВСЕ</button>
+            <button onClick={()=>{router.push('/categories'),close(false)}}>СМОТРЕТЬ ВСЕ</button>
             <button>GIFT CARD/ПОДАРОЧНАЯ КАРТА</button>
         </div>
         <div className={styles.autor}>
                 <span>ANNONCE</span>
                 <span>Все права защищены</span>
+        </div>
+        <div className={styles.mobile}>
+            <button><Profile/>ЛИЧНЫЙ КАБИНЕТ</button>
+            <button>ЧАТ</button>
         </div>
         {open ? <div className={styles.blocker} onClick={()=>close(false)}></div> : <></>}
     </nav>

@@ -1,6 +1,6 @@
 @use '/fsd-4shared/configered-styles/mixins' as mixins;
 
-.footer{
+.footer {
     font-family: Arial;
     font-weight: 400;
     line-height: 17.5px;
@@ -16,10 +16,10 @@
     color: #fff;
 }
 
-.bottom_side{
+.bottom_side {
     position: absolute;
     bottom: 0;
-    padding: 0 60px 30px 60px;
+    padding: 0 60px 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -29,18 +29,18 @@
 .autor {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    span{
+    justify-content: space-between;
+    span {
         font-weight: 200;
         margin-right: 10px;
     }
-    div{
+    div {
         display: flex;
         flex-direction: column;
         span {
             font-weight: 400;
             font-size: 0.875rem;
-            &:nth-of-type(2) { 
+            &:nth-of-type(2) {
                 color: #777575;
                 font-size: 0.625rem;
             }
@@ -48,98 +48,174 @@
     }
 }
 
-.top_side{
+.top_side {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    span{
+    span {
         font-weight: 400;
         font-size: 1.063rem;
     }
-    a{
+    a {
         font-size: 0.875rem;
     }
 }
 
-.help, .contacts, .info, .subscribe{
+.contacts,
+.help,
+.info,
+.subscribe {
     display: flex;
     flex-direction: column;
-    gap: 15px
+    gap: 15px;
 }
 
-.right_side{
+.right_side {
     width: 60%;
     display: flex;
     justify-content: space-around;
 }
 
-.left_side{
+.left_side {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contacts{
-    .links{
+.contacts {
+    .links {
         gap: 30px;
     }
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: column;
     line-height: 17.5px;
 }
-.icons{
+.icons {
     display: flex;
     justify-content: space-between;
 }
-.phone{
+.phone {
     display: flex;
     flex-direction: column;
 }
 
-.subscribe{
-@include mixins.transform(-30px);
-button{
-    background: #000;
-    color: #fff;
-    width: 316px;
-    height: 50px;
-    border: 1px solid #fff;
-    font-size: 0.875rem;
-}
-}
-
-@media (max-width: 920px){
-    .right_side{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px
+.subscribe {
+    @include mixins.transform(-30px);
+    button {
+        background: #000;
+        color: #fff;
+        width: 316px;
+        height: 50px;
+        border: 1px solid #fff;
+        font-size: 0.875rem;
     }
 }
 
-@media (max-width: 700px){
-    .footer{
+@media (max-width: 920px) {
+    .right_side {
+        width: 30%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .footer {
         font-size: 0.625rem;
         font-weight: 400;
         line-height: 17.5px;
-        height: 725px;}
+        height: 725px;
+    }
 
-    .top_side{
+    .top_side {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
-    }
-    .help, .contacts, .info, .subscribe{
-        align-items: center;
     }
 
-    .links{
+    .right_side {
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contacts,
+    .help,
+    .info,
+    .subscribe {
+        align-items: center;
+        justify-content: center;
+        span {
+            font-size: 0.625rem;
+        }
+    }
+
+    .links {
         justify-content: center;
         align-items: center;
+        a {
+            font-size: 0.625rem;
+        }
+    }
+    .phone {
+        align-items: center;
+    }
+    .icons {
+        gap: 10px;
+    }
+
+    .bottom_side {
+        position: relative;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 30px 0;
+        svg {
+            width: 69px;
+            height: 21px;
+        }
+        a {
+            position: absolute;
+            bottom: -25px;
+            left: 20px;
+        }
+        button {
+            @include mixins.transform(30px);
+        }
+    }
+
+    .autor {
+        padding: 0 20px;
+        span {
+            font-weight: 200;
+            margin-right: 10px;
+            font-size: 0.625rem;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            span {
+                font-weight: 400;
+                font-size: 0.625rem;
+                &:nth-of-type(2) {
+                    color: #777575;
+                    font-size: 0.625rem;
+                    @include mixins.transform(-5px);
+                }
+            }
+        }
+    }
+
+    .subscribe {
+        button {
+            width: 243px;
+            height: 20px;
+            font-size: 0.625rem;
+        }
     }
 }

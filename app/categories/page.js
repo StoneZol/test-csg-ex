@@ -55,7 +55,8 @@ export default function Page() {
       ];
 
   return (
-    <div className={`${manrope.className} ${styles.page}`}>               
+    <div className={`${manrope.className} ${styles.page}`}> 
+    <div className={styles.header_bg}> </div>              
     <div className={styles.left_side}>
         <span>КАТЕГОРИИ</span>
         <div>
