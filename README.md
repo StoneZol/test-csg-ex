@@ -1,6 +1,8 @@
+
+
 # Test CSG Ex
 
-Данный проект — это веб-приложение, развернутое по адресу [test-csg-ex.vercel.app](https://test-csg-ex.vercel.app/). Код проекта доступен на GitHub: [репозиторий](https://github.com/StoneZol/test-csg-ex).
+Данный проект — это демо страница интернет магазина женской одежды, развернутое по адресу [test-csg-ex.vercel.app](https://test-csg-ex.vercel.app/). Код проекта доступен на GitHub: [репозиторий](https://github.com/StoneZol/test-csg-ex).
 
 ## Стек технологий
 
@@ -8,6 +10,8 @@
 - **JavaScript**
 - **Swiper**
 - **Sass (SCSS)**
+
+ ![Prev](https://i.ibb.co/nGcRNBg/13rsgfeggg.webp)
 
 ## Особенности
 
